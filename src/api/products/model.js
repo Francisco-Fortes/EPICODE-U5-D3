@@ -5,6 +5,8 @@ const ProductsModel = sequelize.define("user", {
   // Parameters: Name for the Model + Options
   //It is Model & Schema at the same time
   product_id: {
+    // type: DataTypes.UUID
+    // gives you back a uniqueId
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,

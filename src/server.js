@@ -9,11 +9,11 @@ const port = process.env.PORT || 3001;
 server.use(cors());
 server.use(express.json());
 //Endpoints
-
+server.use("/product", productsRouter);
 //ErrorHandlers
 
 await pgConnect(); //there is an implicit async
-await syncModels;
+await syncModels();
 
 server.listen(port, () => {
   console.table(listEndpoints(server));
