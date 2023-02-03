@@ -4,7 +4,7 @@ import ProductsModel from "./model.js";
 const productsRouter = express.Router();
 
 // POST /product => create a new product
-productsRouter.post("/", async (re, res, next) => {
+productsRouter.post("/", async (req, res, next) => {
   try {
     const { id } = await ProductsModel.create(req.body);
     res.status(201).send({ id });

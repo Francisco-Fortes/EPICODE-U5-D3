@@ -5,6 +5,7 @@ const sequelize = new Sequelize(PG_DB, PG_USER, PG_PASSWORD, {
   port: PG_PORT,
   dialect: "postgres", //chose DB you are going to use
 });
+
 //constructor that takes as parameters db, username, pass + options(host, port, dialect)
 export default sequelize;
 

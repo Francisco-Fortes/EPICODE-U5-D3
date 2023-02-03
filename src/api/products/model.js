@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../../db";
+import sequelize from "../../db.js";
 
-const ProductsModel = sequelize.define("user", {
+const ProductsModel = sequelize.define("product", {
   // Parameters: Name for the Model + Options
   //It is Model & Schema at the same time
   product_id: {
@@ -29,10 +29,6 @@ const ProductsModel = sequelize.define("user", {
   },
   price: {
     type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-  image: {
-    type: DataTypes.STRING,
     allowNull: false,
   },
 });
